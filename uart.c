@@ -8,7 +8,7 @@
   Use 1 start, 8 data and 1 stop bit; no parity or flow control.
   Use blocking Tx, and polling Rx.
 */
-void UART_begin(uint32_t BR) {
+void uart__begin(uint32_t BR) {
 
   uint16_t  val16;
   

@@ -5,18 +5,18 @@
 
 
 /// check if byte received via UART2
-#define UART_available()   ( sfr_UART1.SR.RXNE )
+#define uart__available()   ( sfr_UART1.SR.RXNE )
 
 /// read received byte from UART2
-#define UART_read()        ( sfr_UART1.DR.byte )
+#define uart__read()        ( sfr_UART1.DR.byte )
 
 /// send byte via UART2
-#define UART_write(x)	     { while (!(sfr_UART1.SR.TXE)); sfr_UART1.DR.byte = x; }
+#define uart__write(x)	     { while (!(sfr_UART1.SR.TXE)); sfr_UART1.DR.byte = x; }
 
 /// flush UART2
-#define UART_flush()	     { while (!(sfr_UART1.SR.TC)); }
+#define uart__flush()	     { while (!(sfr_UART1.SR.TC)); }
 
 
 /// initialize UART
-void UART_begin(uint32_t BR);
+void uart__begin(uint32_t BR);
 

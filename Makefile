@@ -8,6 +8,7 @@ build: uart.lib
 
 test: test.ihx
 	sudo stm8flash -c stlinkv2 -p stm8s003f3 -w test.ihx
+	sleep 1
 	./monitor.sh
 
 

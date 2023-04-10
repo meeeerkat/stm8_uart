@@ -2,6 +2,6 @@
 #include "uart.h"
 
 int putchar(int data) {
-  UART_write(data);
+  uart__write(data);
   return data;
 }
